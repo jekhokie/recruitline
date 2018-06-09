@@ -1,6 +1,6 @@
 class RequisitionsController < ApplicationController
   before_action :set_requisition, only: [:show, :edit, :update, :destroy]
-  before_action :get_recruiter, only: [:new, :create]
+  before_action :get_recruiter, only: [:create]
 
   # GET /requisitions
   def index
@@ -13,7 +13,7 @@ class RequisitionsController < ApplicationController
 
   # GET /requisitions/new
   def new
-    @requisition = @recruiter.requisitions.new
+    @requisition = Requisition.new
   end
 
   # GET /requisitions/1/edit

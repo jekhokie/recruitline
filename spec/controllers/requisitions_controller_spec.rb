@@ -19,8 +19,7 @@ RSpec.describe RequisitionsController, type: :controller do
 
   describe "GET #new" do
     it "returns a success response" do
-      recruiter = FactoryBot.create(:recruiter)
-      get :new, params: {recruiter_id: recruiter.id}
+      get :new, params: {}
       expect(response).to be_successful
     end
   end
