@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" role="navigation">
+  <a class="navbar-brand" href="#">Recruitline</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav">
+      <li class="<%= 'active' if controller_name == 'candidates' %>">
+        <a href="#">Candidates</a>
+      </li>
+      <li class="<%= 'active' if controller_name == 'recruiters' %>">
+        <a href="<%= recruiters_path %>">Recruiters</a>
+      </li>
+      <li class="<%= 'active' if controller_name == 'requisitions' %>">
+        <a href="<%= requisitions_path %>">Requisitions</a>
+      </li>
+      <li class="<%= 'active' if controller_name == 'interviewers' %>">
+        <a href="#">Interviewers</a>
+      </li>
+    </ul>
+  </div>
+</nav>
