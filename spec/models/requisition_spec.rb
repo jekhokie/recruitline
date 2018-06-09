@@ -6,6 +6,7 @@ RSpec.describe Requisition, type: :model do
   end
 
   it { should have_many :candidates }
+	it { should belong_to :recruiter }
 
   describe "valid?" do
     # title

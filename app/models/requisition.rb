@@ -3,4 +3,5 @@ class Requisition < ApplicationRecord
   validates :open_date, presence: { :message => "for requisition can't be blank" }
 
   has_many :candidates
+	belongs_to :recruiter
 end
