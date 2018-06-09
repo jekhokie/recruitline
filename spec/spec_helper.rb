@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'factory_bot_rails'
 require 'support/factory_bot'
 
