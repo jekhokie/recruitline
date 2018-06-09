@@ -7,10 +7,12 @@ gem 'rails', '~> 5.2.0'
 gem 'bootsnap'
 gem 'sqlite3'
 gem 'passenger'
+gem 'turbolinks'
 gem 'uglifier'
 gem 'mini_racer', platforms: :ruby
 
 group :development, :test do
+  gem 'factory_bot_rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
 end
