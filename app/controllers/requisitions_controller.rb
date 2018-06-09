@@ -22,7 +22,6 @@ class RequisitionsController < ApplicationController
 
   # POST /requisitions
   def create
-    puts requisition_params
     @requisition = @recruiter.requisitions.new(requisition_params)
 
     if @requisition.save
