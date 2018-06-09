@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @requisition.title %>
+</p>
+
+<p>
+  <strong>Open Date:</strong>
+  <%= @requisition.open_date %>
+</p>
+
+<p>
+  <strong>Close Date:</strong>
+  <%= @requisition.close_date %>
+</p>
+
+<%= link_to 'Edit', edit_requisition_path(@requisition) %> |
+<%= link_to 'Back', requisitions_path %>

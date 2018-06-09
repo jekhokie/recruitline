@@ -13,6 +13,7 @@ gem 'mini_racer', platforms: :ruby
 
 group :development, :test do
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'

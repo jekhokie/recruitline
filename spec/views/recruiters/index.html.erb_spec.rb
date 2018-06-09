@@ -4,12 +4,12 @@ RSpec.describe "recruiters/index", type: :view do
   before(:each) do
     assign(:recruiters, [
       Recruiter.create!(
-        :first_name => "First Name",
-        :last_name => "Last Name"
+        first_name: "First Name",
+        last_name: "Last Name"
       ),
       Recruiter.create!(
-        :first_name => "First Name",
-        :last_name => "Last Name"
+        first_name: "First Name",
+        last_name: "Last Name"
       )
     ])
   end

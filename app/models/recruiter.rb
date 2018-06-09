@@ -3,4 +3,5 @@ class Recruiter < ApplicationRecord
   validates :last_name, presence: { :message => "for recruiter can't be blank" }
 
 	has_many :candidates
+  has_many :requisitions
 end

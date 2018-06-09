@@ -46,12 +46,10 @@ class RecruitersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_recruiter
       @recruiter = Recruiter.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def recruiter_params
       params.require(:recruiter).permit(:first_name, :last_name)
     end

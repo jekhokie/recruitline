@@ -6,6 +6,7 @@ RSpec.describe Recruiter, type: :model do
   end
 
 	it { should have_many :candidates }
+	it { should have_many :requisitions }
 
   describe "valid?" do
     # first_name
