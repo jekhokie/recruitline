@@ -5,6 +5,8 @@ RSpec.describe Requisition, type: :model do
     expect(Requisition.new).to be_an_instance_of(Requisition)
   end
 
+  it { should have_many :candidates }
+
   describe "valid?" do
     # title
     it "returns false when no title is specified" do

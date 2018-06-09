@@ -5,6 +5,8 @@ RSpec.describe Candidate, type: :model do
     expect(Candidate.new).to be_an_instance_of(Candidate)
   end
 
+  it { should belong_to :requisition }
+
   describe "valid?" do
     # first_name
     it "returns false when no first_name is specified" do
