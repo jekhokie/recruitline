@@ -26,6 +26,11 @@
     <%= form.text_field :close_date %>
   </div>
 
+  <div class="field">
+    <%= form.label :recruiter %>
+    <%= form.collection_select :recruiter_id, Recruiter.all, :id, :full_name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

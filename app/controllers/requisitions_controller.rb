@@ -22,6 +22,7 @@ class RequisitionsController < ApplicationController
 
   # POST /requisitions
   def create
+    puts requisition_params
     @requisition = @recruiter.requisitions.new(requisition_params)
 
     if @requisition.save
@@ -56,6 +57,6 @@ class RequisitionsController < ApplicationController
     end
 
     def get_recruiter
-      @recruiter = Recruiter.find params[:recruiter_id]
+      @recruiter = Recruiter.find params[:requisition][:recruiter_id]
     end
 end
