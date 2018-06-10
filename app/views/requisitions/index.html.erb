@@ -16,12 +16,11 @@
   <tbody>
     <% @requisitions.each do |requisition| %>
       <tr>
-        <td><%= requisition.title %></td>
+        <td><%= link_to requisition.title, requisition %></td>
         <td><%= requisition.open_date %></td>
         <td><%= requisition.close_date %></td>
         <td><%= requisition.recruiter.full_name %></td>
         <td>
-          <%= link_to 'Show', requisition %>
           <%= link_to 'Edit', edit_requisition_path(requisition) %>
           <%= link_to 'Destroy', requisition, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>

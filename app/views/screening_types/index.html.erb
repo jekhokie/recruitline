@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Time minutes</th>
+      <th>Time Minutes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,10 +14,9 @@
   <tbody>
     <% @screening_types.each do |screening_type| %>
       <tr>
-        <td><%= screening_type.name %></td>
+        <td><%= link_to screening_type.name, screening_type %></td>
         <td><%= screening_type.time_minutes %></td>
         <td>
-          <%= link_to 'Show', screening_type %>
           <%= link_to 'Edit', edit_screening_type_path(screening_type) %>
           <%= link_to 'Destroy', screening_type, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>

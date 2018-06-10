@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "requisitions/index.html.erb", type: :view do
-  let!(:req) { FactoryBot.create(:requisition, title: "Title") }
   before(:each) do
     assign(:requisitions, [
       FactoryBot.create(:requisition, title: "Title"),
