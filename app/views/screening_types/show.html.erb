@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @screening_type.name %>
+</p>
+
+<p>
+  <strong>Time minutes:</strong>
+  <%= @screening_type.time_minutes %>
+</p>
+
+<%= link_to 'Edit', edit_screening_type_path(@screening_type) %> |
+<%= link_to 'Back', screening_types_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Screening Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Time minutes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @screening_types.each do |screening_type| %>
+      <tr>
+        <td><%= screening_type.name %></td>
+        <td><%= screening_type.time_minutes %></td>
+        <td><%= link_to 'Show', screening_type %></td>
+        <td><%= link_to 'Edit', edit_screening_type_path(screening_type) %></td>
+        <td><%= link_to 'Destroy', screening_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Screening Type', new_screening_type_path %>

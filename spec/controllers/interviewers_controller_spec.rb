@@ -98,5 +98,4 @@ RSpec.describe InterviewersController, type: :controller do
       expect(response).to redirect_to(interviewers_url)
     end
   end
-
 end
