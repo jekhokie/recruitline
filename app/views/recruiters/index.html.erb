@@ -2,7 +2,7 @@
 
 <h1>Recruiters</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>First name</th>
@@ -16,9 +16,10 @@
       <tr>
         <td><%= recruiter.first_name %></td>
         <td><%= recruiter.last_name %></td>
-        <td><%= link_to 'Show', recruiter %></td>
-        <td><%= link_to 'Edit', edit_recruiter_path(recruiter) %></td>
-        <td><%= link_to 'Destroy', recruiter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', recruiter %>
+          <%= link_to 'Edit', edit_recruiter_path(recruiter) %>
+          <%= link_to 'Destroy', recruiter, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

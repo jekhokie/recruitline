@@ -2,7 +2,7 @@
 
 <h1>Interviewers</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>First name</th>
@@ -16,9 +16,10 @@
       <tr>
         <td><%= interviewer.first_name %></td>
         <td><%= interviewer.last_name %></td>
-        <td><%= link_to 'Show', interviewer %></td>
-        <td><%= link_to 'Edit', edit_interviewer_path(interviewer) %></td>
-        <td><%= link_to 'Destroy', interviewer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', interviewer %>
+          <%= link_to 'Edit', edit_interviewer_path(interviewer) %>
+          <%= link_to 'Destroy', interviewer, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

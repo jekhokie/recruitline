@@ -2,7 +2,7 @@
 
 <h1>Requisitions</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Title</th>
@@ -20,9 +20,11 @@
         <td><%= requisition.open_date %></td>
         <td><%= requisition.close_date %></td>
         <td><%= requisition.recruiter.full_name %></td>
-        <td><%= link_to 'Show', requisition %></td>
-        <td><%= link_to 'Edit', edit_requisition_path(requisition) %></td>
-        <td><%= link_to 'Destroy', requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', requisition %>
+          <%= link_to 'Edit', edit_requisition_path(requisition) %>
+          <%= link_to 'Destroy', requisition, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

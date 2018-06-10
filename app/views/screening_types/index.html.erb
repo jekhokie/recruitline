@@ -2,7 +2,7 @@
 
 <h1>Screening Types</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,11 @@
       <tr>
         <td><%= screening_type.name %></td>
         <td><%= screening_type.time_minutes %></td>
-        <td><%= link_to 'Show', screening_type %></td>
-        <td><%= link_to 'Edit', edit_screening_type_path(screening_type) %></td>
-        <td><%= link_to 'Destroy', screening_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', screening_type %>
+          <%= link_to 'Edit', edit_screening_type_path(screening_type) %>
+          <%= link_to 'Destroy', screening_type, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
