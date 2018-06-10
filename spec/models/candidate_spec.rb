@@ -14,4 +14,10 @@ RSpec.describe Candidate, type: :model do
       expect(FactoryBot.build(:candidate, first_name: "")).to be_invalid
     end
   end
+
+  describe "full_name" do
+    it "returns the concatenation of the first_name and last_name" do
+      expect(FactoryBot.build(:candidate, first_name: "a", last_name: "b").full_name).to eq("a b")
+    end
+  end
 end

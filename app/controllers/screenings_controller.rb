@@ -1,5 +1,8 @@
 class ScreeningsController < ApplicationController
   before_action :set_screening, only: [:show, :edit, :update, :destroy]
+  before_action :get_interviewer, only: [:create]
+  before_action :get_candidate, only: [:create]
+  before_action :get_screening_type, only: [:create]
 
   # GET /screenings
   def index
@@ -22,6 +25,9 @@ class ScreeningsController < ApplicationController
   # POST /screenings
   def create
     @screening = Screening.new(screening_params)
+    @screening.candidate = @candidate
+    @screening.interviewer = @interviewer
+    @screening.screening_type = @screening_type
 
     if @screening.save
       redirect_to @screening, notice: 'Screening was successfully created.'
@@ -53,6 +59,18 @@ class ScreeningsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def screening_params
-      params.require(:screening).permit(:notes)
+      params.require(:screening).permit(:notes, :interviewer_id, :candidate_id, :screening_type_id)
+    end
+
+    def get_interviewer
+      @interviewer = Interviewer.find params[:screening][:interviewer_id]
+    end
+
+    def get_candidate
+      @candidate = Candidate.find params[:screening][:candidate_id]
+    end
+
+    def get_screening_type
+      @screening_type = ScreeningType.find params[:screening][:screening_type_id]
     end
 end

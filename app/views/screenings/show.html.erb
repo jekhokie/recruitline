@@ -1,6 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Interviewer:</strong>
+  <%= @screening.interviewer.full_name %>
+</p>
+
+<p>
+  <strong>Candidate:</strong>
+  <%= @screening.candidate.full_name %>
+</p>
+
+<p>
+  <strong>Screening Type:</strong>
+  <%= @screening.screening_type.name %>
+</p>
+
+<p>
   <strong>Notes:</strong>
   <%= @screening.notes %>
 </p>

@@ -5,6 +5,9 @@
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th>Interviewer</th>
+      <th>Candidate</th>
+      <th>Screening Type</th>
       <th>Notes</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +16,9 @@
   <tbody>
     <% @screenings.each do |screening| %>
       <tr>
+        <td><%= screening.interviewer.full_name %></td>
+        <td><%= screening.candidate.full_name %></td>
+        <td><%= screening.screening_type.name %></td>
         <td><%= screening.notes %></td>
         <td>
           <%= link_to 'Show', screening %>

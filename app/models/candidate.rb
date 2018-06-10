@@ -3,4 +3,10 @@ class Candidate < ApplicationRecord
  
   belongs_to :requisition
 	belongs_to :recruiter
+
+  has_many :screenings
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
 end

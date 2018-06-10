@@ -12,6 +12,21 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :interviewer %>
+    <%= form.collection_select :interviewer_id, Interviewer.all, :id, :full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :candidate %>
+    <%= form.collection_select :candidate_id, Candidate.all, :id, :full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :screening_type %>
+    <%= form.collection_select :screening_type_id, ScreeningType.all, :id, :name %>
+  </div>
+
+  <div class="field">
     <%= form.label :notes %>
     <%= form.text_area :notes %>
   </div>
