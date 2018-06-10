@@ -15,5 +15,10 @@
   <%= @requisition.close_date %>
 </p>
 
+<p>
+  <strong>Recruiter:</strong>
+  <%= @requisition.recruiter.full_name %>
+</p>
+
 <%= link_to 'Edit', edit_requisition_path(@requisition) %> |
 <%= link_to 'Back', requisitions_path %>
