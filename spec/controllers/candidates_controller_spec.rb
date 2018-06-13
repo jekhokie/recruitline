@@ -40,7 +40,8 @@ RSpec.describe CandidatesController, type: :controller do
         expect {
           post :create, params: {recruiter_id: valid_candidate.recruiter.id,
                                  requisition_id: valid_candidate.requisition.id,
-                                 candidate: valid_candidate.attributes}
+                                 candidate: valid_candidate.attributes,
+                                 decision: valid_candidate.decision}
         }.to change(Candidate, :count).by(1)
       end
 

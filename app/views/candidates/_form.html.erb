@@ -46,6 +46,11 @@
     <%= form.collection_select :recruiter_id, Recruiter.all, :id, :full_name %>
   </div>
 
+  <div class="field">
+    <%= form.label :decision %>
+    <%= form.collection_select :decision_id, Decision.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

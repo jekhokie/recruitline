@@ -7,6 +7,7 @@ RSpec.describe Candidate, type: :model do
 
   it { should belong_to :requisition }
 	it { should belong_to :recruiter }
+	it { should belong_to :decision }
 
   describe "valid?" do
     # first_name

@@ -35,5 +35,10 @@
   <%= @candidate.pass_hr_screening ? "True" : "False" %>
 </p>
 
+<p>
+  <strong>Decision:</strong>
+  <%= @candidate.decision.name %>
+</p>
+
 <%= link_to 'Edit', edit_candidate_path(@candidate) %> |
 <%= link_to 'Back', candidates_path %>

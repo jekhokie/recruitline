@@ -5,6 +5,8 @@ RSpec.describe Decision, type: :model do
     expect(Decision.new).to be_an_instance_of(Decision)
   end
 
+	it { should have_many :candidates }
+
   describe "valid?" do
     # name
     it "returns false when no name is specified" do

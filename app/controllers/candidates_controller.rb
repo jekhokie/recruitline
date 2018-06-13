@@ -2,6 +2,7 @@ class CandidatesController < ApplicationController
   before_action :set_candidate, only: [:show, :edit, :update, :destroy]
   before_action :get_recruiter, only: [:create]
   before_action :get_requisition, only: [:create]
+  before_action :get_decision, only: [:create]
 
   # GET /candidates
   def index
@@ -25,6 +26,7 @@ class CandidatesController < ApplicationController
   def create
     @candidate = @requisition.candidates.new(candidate_params)
     @candidate.recruiter = @recruiter
+    @candidate.decision = @decision
 
     if @candidate.save
       redirect_to @candidate, notice: 'Candidate was successfully created.'
@@ -63,5 +65,9 @@ class CandidatesController < ApplicationController
 
     def get_requisition
       @requisition = Requisition.find params[:candidate][:requisition_id]
+    end
+
+    def get_decision
+      @decision = Decision.find params[:candidate][:decision_id]
     end
 end

@@ -3,6 +3,7 @@ class Candidate < ApplicationRecord
  
   belongs_to :requisition
 	belongs_to :recruiter
+  belongs_to :decision
 
   has_many :screenings
 
