@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :requisitions
   resources :recruiters
   resources :candidates
+  resources :decisions
 
   root to: "candidates#index"
 end

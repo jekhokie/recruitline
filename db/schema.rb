@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_234728) do
+ActiveRecord::Schema.define(version: 2018_06_13_000533) do
 
   create_table "candidates", force: :cascade do |t|
     t.string "first_name"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 2018_06_12_234728) do
     t.boolean "pass_hr_screening"
     t.index ["recruiter_id"], name: "index_candidates_on_recruiter_id"
     t.index ["requisition_id"], name: "index_candidates_on_requisition_id"
+  end
+
+  create_table "decisions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "interviewers", force: :cascade do |t|
