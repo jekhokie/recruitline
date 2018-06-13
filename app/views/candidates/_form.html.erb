@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :pass_hr_screening %>
+    <%= form.check_box :pass_hr_screening %>
+  </div>
+
+  <div class="field">
     <%= form.label :requisition %>
     <%= form.collection_select :requisition_id, Requisition.all, :id, :title %>
   </div>

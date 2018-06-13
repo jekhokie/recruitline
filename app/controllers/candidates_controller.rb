@@ -54,7 +54,7 @@ class CandidatesController < ApplicationController
     end
 
     def candidate_params
-      params.require(:candidate).permit(:first_name, :last_name, :email, :phone)
+      params.require(:candidate).permit(:first_name, :last_name, :email, :phone, :pass_hr_screening)
     end
 
     def get_recruiter

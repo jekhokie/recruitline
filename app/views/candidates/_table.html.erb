@@ -6,6 +6,7 @@
       <th>Phone</th>
       <th>Requisition Title</th>
       <th>Recruiter</th>
+      <th>Pass HR Screen?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= candidate.phone %></td>
         <td><%= link_to candidate.requisition.title, requisition_path(candidate.requisition) %></td>
         <td><%= candidate.recruiter.full_name %></td>
+        <td><%= candidate.pass_hr_screening ? "True" : "False" %></td>
         <td>
           <%= link_to 'Edit', edit_candidate_path(candidate) %>
           <%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %>
